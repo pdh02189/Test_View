@@ -25,11 +25,12 @@ const users = [
       {
         id: "sujan777",
         name: "sujan",
-        password: "sujan1234",
+        password: "sujan777",
         email: "sujan@hanul.com",
         phone: "SKT0621234567"
       }
 ]
+
 app.get("/", (req, res) => {
     res.send("get 요청이 들어왔습니다.");  
     console.log(req.params); 
@@ -37,9 +38,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-    const {name, password} = req.body; //요청 id, pw
+    const {id, password} = req.body; //요청 id, pw
     for(const user of users) { // vs for(초깃값;조건식;증감식) {...}
-        if(name === user.name && password === user.password) {
+        if(id === user.id && password === user.password) {
             return res.json({
                 status: 200,
                 statusText: 'success',
