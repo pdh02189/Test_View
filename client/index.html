@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>치젤컴퍼니</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_inner">
+                <div class="logo">
+                    <a href="index.html">치젤컴퍼니</a>
+                </div>
+                <ul class="login_wrap">
+                    <li class="login">
+                        <form autocomplete="off" id="login_form">
+                            <input type="text" id="floatingInput" placeholder="ID" required>
+                            <input type="password" id="floatingPassword" placeholder="PASSWORD" required>
+                            <button type="submit">로그인</button>
+                        </form>
+                    </li>
+                    <li class="join">
+                        <button type="button" onclick="location.href='join.html'">회원가입</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="gnb_inner">
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#">치젤컴퍼니 소개</a>
+                        </li>
+                        <li>
+                            <a href="#">치젤갤러리</a>
+                        </li>
+                        <li>
+                            <a href="#">커뮤니티</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="visual">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/id/11/1200/300" alt="placeholder">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/id/100/1200/300" alt="placeholder">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/id/1000/1200/300" alt="placeholder">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="gal">
+                <h3>치젤갤러리</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/img1.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img2.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img3.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img4.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img5.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img6.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img1.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img2.jpg" alt="치젤 이미지">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="footer_inner">
+                <div class="f_logo">
+                    <a href="#" style="font-family: 'EF_jejudoldam';">치젤컴퍼니</a>
+                </div>
+                <p>COPYRIGHT &copy; ALL RIGHT RESERVED.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script/main.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+  
+      </script>
+</body>
+</html>
