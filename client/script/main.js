@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function () {
     xhr.onreadystatechange = () => {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         let received = JSON.parse(xhr.response);
-        if (received.status === 200) {
+        if (received.statusText === 'success') {
           alert(`${received.name}님, 로그인 되었습니다.`);
         } else {
           alert('아이디 또는 비밀번호를 확인하세요');

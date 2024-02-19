@@ -1,11 +1,15 @@
 const express = require("express"); // 서버를 만드는 express 모듈을 호출
 const app = express(); // express 객체 ==> 서버 인스턴스를 app으로 생성
 const cors = require("cors");
+const bodyParser = require("body-parser");
 let port = 5000;
 // 미들웨어 : 요청-미들웨어-서버에 위치
 app.use(express.json()); // 요청 해석용
 app.use(express.urlencoded({extended: false})); // json 해석용 (false)문자:기본, (true)배열, 객체 
 app.use(cors());
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 // 샘플 회원 데이터 - 메모리 vs DB (나중에 구축)
 const users = [
     {
@@ -46,14 +50,12 @@ app.post("/login", (req, res) => {
                 statusText: 'success',
                 name: user.name
             });
-            break;
         } else {
             // 회원아니거나 회원인데, ID/PW등이 틀린!
             return res.json({
                 status: 400,
                 statusText: 'fail'
             });
-            break;
         }
     }
 });
